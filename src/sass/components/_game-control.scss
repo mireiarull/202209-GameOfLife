@@ -1,5 +1,13 @@
+@use "../variables/colors";
+
 .game-control {
   display: flex;
   font-size: 3rem;
-  padding: 1rem;
+  justify-content: center;
+  gap: 10px;
+}
+i {
+  transform: translateY(-10%);
+  padding: 0 13px;
+  color: colors.$main-color-background;
 }
