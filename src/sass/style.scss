@@ -4,3 +4,6 @@
 @use "components/game-control.scss";
 @use "core/reset";
 @use "core/globals";
+@use "components/cell";
+@use "components/game-grid";
+@use "components/game-container";
