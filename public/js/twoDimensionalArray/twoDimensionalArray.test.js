@@ -1,16 +1,23 @@
-const { default: twoDimensionalArray } = require("./twoDimensionalArray");
+const {
+  default: createEmptyObject,
+} = require("../createEmptyObject/createEmptyObject.js");
+const { default: twoDimensionalArray } = require("./twoDimensionalArray.js");
 
 describe("Given the function twoDimensionalArray", () => {
-  describe("When it receives 10 and 10", () => {
-    test("Then it should return a bidirection array with length 10", () => {
-      const rowX = 10;
-      const columnY = 10;
-      const expectedLenght = 10;
+  const callback = createEmptyObject();
+  describe("When it receives a 3 and 3", () => {
+    test("Then it should return a bidirection array with 3 rows and 3 columns", () => {
+      const rowX = 3;
+      const columnY = 3;
+      const expectedArray = [
+        [{}, {}, {}],
+        [{}, {}, {}],
+        [{}, {}, {}],
+      ];
 
-      const array = twoDimensionalArray(rowX, columnY);
-      const { length } = array[1];
+      const newArray = twoDimensionalArray(callback, rowX, columnY);
 
-      expect(length).toBe(expectedLenght);
+      expect(newArray).toBe(expectedArray);
     });
   });
 });
