@@ -2,6 +2,7 @@ import initialSetup from "./initialSetup/initialSetup.js";
 import setCellFutureState from "./setCellFutureState/setCellFutureState.js";
 import printBoard from "./printBoard/printBoard.js";
 import checkCellNeighbors from "./checkCellNeighbors/checkCellNeighbors.js";
+import updateCellState from "./updateCellState/updateCellState.js";
 
 const playGame = () => {
   const board = initialSetup();
@@ -9,13 +10,14 @@ const playGame = () => {
 
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      // console.log(board[i][j]);
-      const aliveNeighbors = checkCellNeighbors(board, board[i][j]);
-      setCellFutureState(aliveNeighbors, board[i][j]);
+      const cell = board[i][j];
+      const aliveNeighbors = checkCellNeighbors(board, cell);
+      setCellFutureState(aliveNeighbors, cell);
+      updateCellState(cell);
     }
   }
-
-  console.log(board);
+  console.log("debugger:");
+  printBoard(board);
   // printBoard(board);
   // check neighbour cells -> change next cell status
   // print current state

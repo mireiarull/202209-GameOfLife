@@ -15,6 +15,8 @@ const initialSetup = () => {
   gameBoard[1][2].cellIsAlive();
   gameBoard[2][1].cellIsAlive();
   gameBoard[2][2].cellIsAlive();
+  gameBoard[2][3].cellIsAlive();
+  gameBoard[5][2].cellIsAlive();
 
   return gameBoard;
 };
