@@ -1,3 +1,12 @@
+@use "variables/colors";
+@use "variables/fonts";
+@use "components/header.scss";
+
 body {
-  background-color: black;
+  background-color: colors.$main-color-background;
+}
+
+html {
+  color: colors.$main-color-foreground;
+  font-family: fonts.$main-font;
 }
