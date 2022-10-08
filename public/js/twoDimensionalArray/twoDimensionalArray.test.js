@@ -17,7 +17,7 @@ describe("Given the function twoDimensionalArray", () => {
 
       const newArray = twoDimensionalArray(callback, rowX, columnY);
 
-      expect(newArray).toBe(expectedArray);
+      expect(newArray).toEqual(expectedArray);
     });
   });
 });
