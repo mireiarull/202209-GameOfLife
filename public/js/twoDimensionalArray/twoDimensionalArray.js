@@ -1,9 +1,9 @@
 const twoDimensionalArray = (callback, rowX, columnY) => {
-  const boardArray = new Array(columnY);
-  for (let i = 0; i < columnY; i++) {
+  const boardArray = new Array(rowX);
+  for (let i = 0; i < rowX; i++) {
     boardArray[i] = [];
-    for (let j = 0; j < rowX; j++) {
-      boardArray[i][j] = callback;
+    for (let j = 0; j < columnY; j++) {
+      boardArray[i][j] = callback(i, j);
     }
   }
   return boardArray;
