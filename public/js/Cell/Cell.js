@@ -9,8 +9,16 @@ class Cell {
     this.positionY = columY;
   }
 
-  cellRevives() {
+  cellIsAlive() {
+    this.isAlive = true;
+  }
+
+  cellWillBeAlive() {
     this.willBeAlive = true;
+  }
+
+  cellWillDie() {
+    this.willBeAlive = false;
   }
 
   cellOnClick() {
