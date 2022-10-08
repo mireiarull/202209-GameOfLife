@@ -1,0 +1,16 @@
+@use "../variables/colors";
+@use "../variables/fonts";
+
+body {
+  background-color: colors.$main-color-background;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+html {
+  color: colors.$main-color-foreground;
+  font-family: fonts.$main-font;
+}
