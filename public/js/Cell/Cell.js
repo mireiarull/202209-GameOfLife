@@ -17,7 +17,7 @@ class Cell {
     this.isAlive = false;
   }
 
-  cellWillBeAlive() {
+  cellWillSurvive() {
     this.willBeAlive = true;
   }
 

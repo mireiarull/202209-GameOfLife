@@ -1,15 +1,11 @@
-const setCellFutureState = (aliveNeighbors, currentCell) => {
-  if (currentCell.isAlive && (aliveNeighbors === 2 || aliveNeighbors === 3)) {
-    currentCell.cellWillBeAlive();
+const setCellFutureState = (aliveNeighbors, cell) => {
+  if (cell.isAlive && (aliveNeighbors === 2 || aliveNeighbors === 3)) {
+    cell.cellWillSurvive();
+  } else if (!cell.isAlive && aliveNeighbors === 3) {
+    cell.cellWillSurvive();
   } else {
-    currentCell.cellWillDie();
+    cell.cellWillDie();
   }
-
-  if (!currentCell.isAlive && aliveNeighbors === 3) {
-    currentCell.willBeAlive();
-  }
-  // if isAlive === true && aliveNeighbourCount === 2 || 3 --> willBeAlive === true -- else false
-  // if isAlive === false && aliveNeighbourCount === 3 || --> willBeAlive === true
 };
 
 export default setCellFutureState;
