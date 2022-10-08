@@ -13,7 +13,11 @@ class Cell {
     this.isAlive = true;
   }
 
-  cellWillBeAlive() {
+  cellIsDead() {
+    this.isAlive = false;
+  }
+
+  cellWillSurvive() {
     this.willBeAlive = true;
   }
 
