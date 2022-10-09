@@ -17,63 +17,38 @@ const initialSetup = (type) => {
   if (type === "custom") {
     gameBoard = playPlayerPattern(gameBoard);
   } else if (type === "default") {
-    gameBoard[5][13].cellIsAlive();
-    gameBoard[5][14].cellIsAlive();
-    gameBoard[5][15].cellIsAlive();
-    gameBoard[5][19].cellIsAlive();
-    gameBoard[5][20].cellIsAlive();
-    gameBoard[5][21].cellIsAlive();
+    gameBoard[7][9].cellIsAlive();
+    gameBoard[7][10].cellIsAlive();
+    gameBoard[8][9].cellIsAlive();
+    gameBoard[8][10].cellIsAlive();
 
-    gameBoard[7][11].cellIsAlive();
-    gameBoard[7][16].cellIsAlive();
-    gameBoard[7][18].cellIsAlive();
-    gameBoard[7][23].cellIsAlive();
+    gameBoard[6][26].cellIsAlive();
+    gameBoard[6][27].cellIsAlive();
+    gameBoard[7][26].cellIsAlive();
+    gameBoard[7][28].cellIsAlive();
+    gameBoard[8][28].cellIsAlive();
+    gameBoard[9][26].cellIsAlive();
+    gameBoard[9][27].cellIsAlive();
+    gameBoard[9][28].cellIsAlive();
 
-    gameBoard[8][11].cellIsAlive();
-    gameBoard[8][16].cellIsAlive();
-    gameBoard[8][18].cellIsAlive();
-    gameBoard[8][23].cellIsAlive();
+    gameBoard[7][36].cellIsAlive();
+    gameBoard[7][37].cellIsAlive();
+    gameBoard[8][36].cellIsAlive();
+    gameBoard[8][37].cellIsAlive();
 
-    gameBoard[9][11].cellIsAlive();
-    gameBoard[9][16].cellIsAlive();
-    gameBoard[9][18].cellIsAlive();
-    gameBoard[9][23].cellIsAlive();
+    gameBoard[14][9].cellIsAlive();
+    gameBoard[14][10].cellIsAlive();
+    gameBoard[15][9].cellIsAlive();
+    gameBoard[15][10].cellIsAlive();
 
-    gameBoard[10][13].cellIsAlive();
-    gameBoard[10][14].cellIsAlive();
-    gameBoard[10][15].cellIsAlive();
-    gameBoard[10][19].cellIsAlive();
-    gameBoard[10][20].cellIsAlive();
-    gameBoard[10][21].cellIsAlive();
-
-    gameBoard[12][13].cellIsAlive();
-    gameBoard[12][14].cellIsAlive();
-    gameBoard[12][15].cellIsAlive();
-    gameBoard[12][19].cellIsAlive();
-    gameBoard[12][20].cellIsAlive();
-    gameBoard[12][21].cellIsAlive();
-
-    gameBoard[13][11].cellIsAlive();
-    gameBoard[13][16].cellIsAlive();
-    gameBoard[13][18].cellIsAlive();
-    gameBoard[13][23].cellIsAlive();
-
-    gameBoard[14][11].cellIsAlive();
-    gameBoard[14][16].cellIsAlive();
-    gameBoard[14][18].cellIsAlive();
-    gameBoard[14][23].cellIsAlive();
-
-    gameBoard[15][11].cellIsAlive();
-    gameBoard[15][16].cellIsAlive();
-    gameBoard[15][18].cellIsAlive();
-    gameBoard[15][23].cellIsAlive();
-
-    gameBoard[17][13].cellIsAlive();
-    gameBoard[17][14].cellIsAlive();
-    gameBoard[17][15].cellIsAlive();
-    gameBoard[17][19].cellIsAlive();
-    gameBoard[17][20].cellIsAlive();
-    gameBoard[17][21].cellIsAlive();
+    gameBoard[13][26].cellIsAlive();
+    gameBoard[13][27].cellIsAlive();
+    gameBoard[13][28].cellIsAlive();
+    gameBoard[14][28].cellIsAlive();
+    gameBoard[15][26].cellIsAlive();
+    gameBoard[15][28].cellIsAlive();
+    gameBoard[16][26].cellIsAlive();
+    gameBoard[16][27].cellIsAlive();
 
     printBoard(gameBoard);
     playDefaultPattern(gameBoard);

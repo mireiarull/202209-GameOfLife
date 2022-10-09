@@ -20,7 +20,7 @@ const playPlayerPattern = (board) => {
     .addEventListener("click", () => {
       myInterval = setInterval(() => {
         playGame(userBoard);
-      }, 1000);
+      }, 500);
     });
 
   document
