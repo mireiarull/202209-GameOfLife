@@ -6,6 +6,7 @@ const setCellFutureState = (aliveNeighbors, cell) => {
   } else {
     cell.cellWillDie();
   }
+  return cell;
 };
 
 export default setCellFutureState;
