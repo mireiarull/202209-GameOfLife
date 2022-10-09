@@ -7,7 +7,7 @@
   aspect-ratio: 1/1;
 
   &--alive {
-    background-color: white;
+    background-color: colors.$main-color-theme;
   }
 
   &--dead {

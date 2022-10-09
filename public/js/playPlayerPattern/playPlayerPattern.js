@@ -1,3 +1,4 @@
+import initialSetup from "../initialSetup/initialSetup.js";
 import playGame from "../playGame/playGame.js";
 
 const playPlayerPattern = (board) => {
@@ -33,7 +34,7 @@ const playPlayerPattern = (board) => {
     .querySelector(".game-control__reset")
     .addEventListener("click", () => {
       clearInterval(myInterval);
-      location.reload();
+      initialSetup("custom");
     });
 };
 

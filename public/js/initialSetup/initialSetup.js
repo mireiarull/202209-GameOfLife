@@ -1,6 +1,7 @@
 import Cell from "../Cell/Cell.js";
 import playDefaultPattern from "../playDefaultPattern/playDefaultPattern.js";
 import playPlayerPattern from "../playPlayerPattern/playPlayerPattern.js";
+import printBoard from "../printBoard/printBoard.js";
 import twoDimensionalArray from "../twoDimensionalArray/twoDimensionalArray.js";
 
 const boardRows = 24;
@@ -74,6 +75,7 @@ const initialSetup = (type) => {
     gameBoard[17][20].cellIsAlive();
     gameBoard[17][21].cellIsAlive();
 
+    printBoard(gameBoard);
     playDefaultPattern(gameBoard);
   }
   return gameBoard;
