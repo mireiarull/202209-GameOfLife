@@ -1,23 +1,18 @@
 const printBoard = (board) => {
-  // for (let i = 0; i < board.length; i++) {
-  //   console.log(
-  //     board[i].map((cell) => {
-  //       if (cell.isAlive) {
-  //         return 1;
-  //       }
-  //       return 0;
-  //     })
-  //   );
-  // }
-
-  const boardToPrint = board.flat();
+  const boardToPrint = board;
   for (let i = 0; i < boardToPrint.length; i++) {
-    if (boardToPrint[i].isAlive) {
-      document.querySelector(`.cell--${i}`).classList.remove("cell--dead");
-      document.querySelector(`.cell--${i}`).classList.add("cell--alive");
-    } else {
-      document.querySelector(`.cell--${i}`).classList.remove("cell--alive");
-      document.querySelector(`.cell--${i}`).classList.add("cell--dead");
+    for (let j = 0; j < boardToPrint[i].length; j++) {
+      if (boardToPrint[i][j].isAlive) {
+        document
+          .querySelector(`.cell--${i}-${j}`)
+          .classList.remove("cell--dead");
+        document.querySelector(`.cell--${i}-${j}`).classList.add("cell--alive");
+      } else {
+        document
+          .querySelector(`.cell--${i}-${j}`)
+          .classList.remove("cell--alive");
+        document.querySelector(`.cell--${i}-${j}`).classList.add("cell--dead");
+      }
     }
   }
 };

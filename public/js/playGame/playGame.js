@@ -1,7 +1,7 @@
 import setCellFutureState from "../setCellFutureState/setCellFutureState.js";
 import printBoard from "../printBoard/printBoard.js";
 import checkCellNeighbors from "../checkCellNeighbors/checkCellNeighbors.js";
-import updateCellState from "../updateCellState/updateCellState.js";
+import updateCellsState from "../updateCellState/updateCellsState.js";
 
 const playGame = (board) => {
   printBoard(board);
@@ -12,7 +12,7 @@ const playGame = (board) => {
       setCellFutureState(aliveNeighbors, cell);
     }
   }
-  updateCellState(board);
+  updateCellsState(board);
 };
 
 export default playGame;
