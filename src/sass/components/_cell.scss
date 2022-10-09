@@ -1,5 +1,16 @@
+@use "../variables/colors";
+
 .cell {
   border: 1px solid white;
-  height: 1.4vw;
+  width: 1.4vw;
+  min-width: 15px;
   aspect-ratio: 1/1;
+
+  &--alive {
+    background-color: white;
+  }
+
+  &--dead {
+    background-color: colors.$main-color-background;
+  }
 }

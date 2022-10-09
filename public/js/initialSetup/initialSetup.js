@@ -1,8 +1,8 @@
 import Cell from "../Cell/Cell.js";
 import twoDimensionalArray from "../twoDimensionalArray/twoDimensionalArray.js";
 
-const boardRows = 6;
-const boardColumns = 6;
+const boardRows = 24;
+const boardColumns = 50;
 
 const initialSetup = () => {
   const gameBoard = twoDimensionalArray(
