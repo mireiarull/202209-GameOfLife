@@ -1,9 +1,9 @@
-import eventListeners from "../eventListeners/eventListeners.js";
+import setEventListeners from "../eventListeners/setEventListeners.js";
 import initialSetup from "../initialSetup/initialSetup.js";
 
 const gameOfLife = () => {
   const board = initialSetup();
-  eventListeners(board);
+  setEventListeners(board);
 };
 
 export default gameOfLife;
