@@ -37,7 +37,10 @@
     padding: 0.8rem;
     margin: 1.2rem;
     &__emoji {
+      display: flex;
+      justify-content: center;
       font-size: 2rem;
+      padding-bottom: 1rem;
     }
   }
 
