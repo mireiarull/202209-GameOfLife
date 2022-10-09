@@ -4,10 +4,7 @@ import checkCellNeighbors from "../checkCellNeighbors/checkCellNeighbors.js";
 import updateCellState from "../updateCellState/updateCellState.js";
 
 const playGame = (board) => {
-  // let currentGeneration = 1;
-  // const lastGeneration = 10;
-
-  // while (pause !== true) {
+  // debugger;
   printBoard(board);
   for (let xAxis = 0; xAxis < board.length; xAxis++) {
     for (let yAxis = 0; yAxis < board[xAxis].length; yAxis++) {
@@ -16,10 +13,11 @@ const playGame = (board) => {
       setCellFutureState(aliveNeighbors, cell);
     }
   }
+  // console.log("before update:");
+  // console.log(board);
   updateCellState(board);
-  console.log("debugger: Next generation");
-  // currentGeneration++;
-  // }
+  // console.log("after update:");
+  // console.log(board);
 };
 
 export default playGame;

@@ -1,9 +1,8 @@
-// import playGame from "../playGame/playGame.js";
-// import buttonNext from "../buttonNext/buttonNext.js";
-// import buttonStart from "../buttonStart/buttonStart.js";
+import initialSetup from "../initialSetup/initialSetup.js";
 import playGame from "../playGame/playGame.js";
 
 const setEventListeners = (board) => {
+  let playBoard = board;
   let myInterval;
 
   const startButtonHtml = document.querySelector(".game-control__action--play");
@@ -16,7 +15,16 @@ const setEventListeners = (board) => {
   const nextButtonHtml = document.querySelector(".game-control__forward");
   nextButtonHtml.addEventListener("click", () => {
     clearInterval(myInterval);
-    playGame(board);
+    playGame(playBoard);
+  });
+
+  const resetHtml = document.querySelector(".game-control__reset");
+  resetHtml.addEventListener("click", () => {
+    console.log("reset");
+    clearInterval(myInterval);
+    playBoard = initialSetup();
+    console.log(playBoard);
+    playGame(playBoard);
   });
 };
 

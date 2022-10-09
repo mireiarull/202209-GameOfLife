@@ -21,6 +21,9 @@ const checkCellNeighbors = (board, cell) => {
       aliveNeighborsCount++;
     }
   });
+  // if (cell.positionX === 1 && cell.positionY === 3) {
+  //   console.log(aliveNeighborsCount);
+  // }
 
   return aliveNeighborsCount;
 };

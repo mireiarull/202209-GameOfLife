@@ -13,8 +13,10 @@ const printBoard = (board) => {
   const boardToPrint = board.flat();
   for (let i = 0; i < boardToPrint.length; i++) {
     if (boardToPrint[i].isAlive) {
+      document.querySelector(`.cell--${i}`).classList.remove("cell--dead");
       document.querySelector(`.cell--${i}`).classList.add("cell--alive");
-    } else {
+    } else if (boardToPrint[i].isAlive === false) {
+      document.querySelector(`.cell--${i}`).classList.remove("cell--alive");
       document.querySelector(`.cell--${i}`).classList.add("cell--dead");
     }
   }
